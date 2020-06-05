@@ -63,7 +63,7 @@ const App= () => {
         options={{ headerShown : false}}
         />
           <RootStack.Screen name="ColorPaletteModal" component={ColorPaletteModal} 
-        options={{ headerShown : false}}
+           options={({ route }) => ({ title: "Modal",headerStyle:{backgroundColor: '#282C34',},headerTintColor:'white' })}
         />
      </RootStack.Navigator>
     </NavigationContainer> 
