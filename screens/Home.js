@@ -89,6 +89,9 @@ const Home = ({navigation}) => {
       )}
       refreshing ={isRefreshing}
       onRefresh={handleRefresh}
+      ListHeaderComponent={<TouchableOpacity onPress={()=>navigation.navigate('ColorPaletteModal')}>
+          <Text>CLick The Modal</Text>
+      </TouchableOpacity>}
     />
   );
 };
