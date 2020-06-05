@@ -8,7 +8,7 @@ const PalettePreview = ({handlePress,ColorPalette}) =>
         <Text style={styles.text} >Click For {ColorPalette.paletteName} Page</Text>
         <FlatList
         style={styles.f}
-        data = {ColorPalette.colors.slice(0,5)}
+        data = {ColorPalette.colors?ColorPalette.colors.slice(0,5):''}
         keyExtractor = {item=> item.colorName }
         renderItem = {({item})=> <View style={[{backgroundColor:`${item.hexCode}`},styles.box]}/>}
         />
